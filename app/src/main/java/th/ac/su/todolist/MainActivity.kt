@@ -36,6 +36,15 @@ class MainActivity : AppCompatActivity() {
 //        registerForContextMenu(btnAdd)
         btnAdd.setOnClickListener {
 
+
+
+            if(edtInput.length() == 0 || edtInput.equals("") || edtInput == null)
+            {
+                Toast.makeText(this,"is Empty", Toast.LENGTH_SHORT).show()
+            }
+
+
+
             itemList.add(0,edtInput.text.toString())
 
             arrayAdapter.notifyDataSetChanged()//เพื่อบอกว่ามีดารรเปลี่ยนแปลง data เพื่อการ update
